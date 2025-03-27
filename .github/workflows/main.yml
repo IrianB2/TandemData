@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name:  Post JSON File to Two URLs
 
 on:
@@ -13,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repositor
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Send JSON Data to First URL
         run: |
@@ -26,5 +24,4 @@ jobs:
          curl -X POST "https://:a5tf8pm4SCGInRhmm5IvDw@tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:VhbYXUIMRSeXrgGrYuffUw/streams/AQAAAAS_acBADkopvXnplm7NU_YAAAAA" \
              -H "Content-Type: application/json" \
              -d @stream.json
-
-      -
+             
